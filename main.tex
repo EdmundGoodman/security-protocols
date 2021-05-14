@@ -1,0 +1,67 @@
+% Preamble =====================================================================
+\documentclass{article}
+
+% Allow special characters, and additional commands such as `\FloatBarrier`
+\usepackage[utf8]{inputenc}
+\usepackage[section]{placeins}
+
+% Allow syntax highlighting of source code (requires shell-escape flag)
+% \usepackage{minted}
+
+% Allow images, and set them to import from the "./images" directory
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+% Set the dimensions of the paper to render on
+\usepackage{geometry}
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm,}
+% Colour in references, such as hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black, filecolor=magenta, urlcolor=blue,
+    citecolor=black}
+
+
+% Document =====================================================================
+\begin{document}
+
+
+\begin{titlepage}
+    \vspace*{\fill}
+    \begin{center}
+        \Huge\textbf{Project Name}\\
+        \huge\textit{Edmund Goodman}\\
+        \huge\textit{Date}
+    \end{center}
+    \vspace*{\fill}
+\end{titlepage}
+
+\section{Abstract}
+
+
+% Add a table of contents section to the table of contents
+\addtocounter{section}{1}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection} Contents}
+\tableofcontents
+
+
+\section{Document}
+\subsection{Images}
+% Add an image with a caption
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{imageSource.png}
+    \caption{Caption}
+    \label{fig:imageReference}
+\end{figure}
+
+
+% Add a references section to the contents list
+\addtocounter{section}{1}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection} References}
+
+% Write out the biobliography in IEEE format, and include uncited references
+\bibliographystyle{ieeetr}
+\bibliography{references.bib}
+\nocite{*}
+
+
+\end{document}
