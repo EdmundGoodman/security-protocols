@@ -1,9 +1,10 @@
+#This is slightly prettified from when it was written
 import time
 import collections
 import random
 
 def chunks(braces):
-    """helper function to pair a list up 1st with last, 2nd with
+    """Helper function to pair a list up 1st with last, 2nd with
     penultimateetc."""
     newbraces = collections.OrderedDict()
     for i in range(0, int(len(braces)/2)):

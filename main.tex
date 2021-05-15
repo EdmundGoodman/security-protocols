@@ -142,7 +142,7 @@ Consider the following protocol:
     A \rightarrow AS: A, B, I_{A1}
 \end{equation}
 
-We can break this down by the colon. Before the colon $A \rightarrow AS$ means
+\noindent We can break this down by the colon. Before the colon $A \rightarrow AS$ means
 the message is from the sender $A$ (commonly personified as Alice) and to the
 server $AS$ (commonly personified as Sam). After the colon the $A, B, I_{A1}$ is
 the content of the message. The character $I$ (sometimes indicated by $N$)
@@ -150,26 +150,25 @@ denotes a nonce (which is shorthand for a number only used once) and the
 subscript denoted the sender and the number of the nonce. Nonces are used to
 guarantee the freshness of the message.
 
+\medskip
 
-
-Consider the following protocol:
+\noindent Consider the following protocol:
 \begin{equation}
     A \rightarrow B: \{CK, A\}^{KB}
 \end{equation}
 
-We can similarly break this down by the colon and surmise from our previous
+\noindent We can similarly break this down by the colon and surmise from our previous
 knowledge that it is a message from $A$ (Alice) to $B$ (Bob). The content of the
-message however is different. Content within curly braces is encrypted with
-the encryption key shown in superscript next to it. Furthermore content with the
+message however is different. Content within curly braces is encrypted with the
+encryption key shown in superscript next to it. Furthermore content with the
 character $K$ in tends to stand for encryption key’s. For example, in this case
-$CK$ is a conversation key and $KB$ is the key of Bob.
+$CK$ is a conversation key and $KB$ is the key of Bob. Furthermore, we can do
+arithmetic operations on nonces, as they are numbers, this will prove useful
+later and is denoted by $I_{B1} - 1$.
 
-Furthermore, we can do arithmetic operations on nonces, as they are numbers,
-this will prove useful later and is denoted by $I_{B1} - 1$.
+\medskip
 
-
-
-The Needham-Schroeder protocol is:
+\noindent The Needham-Schroeder protocol is:
 % ===== 1 =====
 \begin{equation}
     A \rightarrow AS: A, B, I_{A1}
@@ -192,7 +191,7 @@ The Needham-Schroeder protocol is:
 \end{equation}
 
 
-This can be shown visually in the diagram:
+\noindent This can be shown visually in the diagram:
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.6\textwidth]{protocolDiagram.png}
